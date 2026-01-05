@@ -1,0 +1,66 @@
+// _typography.scss
+
+@use "./variables" as *;
+
+@mixin text-base($color: $color-black-60) {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: 300;
+    font-size: $font-size-sm;
+    line-height: $line-height-sm;
+    letter-spacing: 0;
+    color: $color;
+}
+
+@mixin text-md($weight: 300, $color: $color-black-87) {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $font-size-md;
+    line-height: $line-height-md;
+    letter-spacing: 0;
+    color: $color;
+}
+
+@mixin text-lg($weight: 300, $color: $color-black-87) {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: $weight;
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+    letter-spacing: 0;
+    color: $color;
+}
+
+@mixin heading-xl {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: 300;
+    font-size: $font-size-xl;
+    line-height: $line-height-xl;
+    letter-spacing: 0;
+    color: $color-black-87;
+}
+
+@mixin heading-xxl {
+    font-family: $font-family-base;
+    font-style: normal;
+    font-weight: 300;
+    font-size: $font-size-xxl;
+    line-height: $line-height-xxl;
+    letter-spacing: 0;
+    color: $color-black-87;
+}
+
+@mixin text-base-bold($color: $color-white) {
+    @include text-base($color);
+    font-weight: bold;
+}
+
+@mixin text-md-bold($color: $color-black-87) {
+    @include text-md(bold, $color);
+}
+
+@mixin text-lg-bold($color: $color-black-87) {
+    @include text-lg(bold, $color);
+}

@@ -1,0 +1,6 @@
+// global.scss
+
+@import "normalize.css";
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography";

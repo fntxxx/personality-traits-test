@@ -1,0 +1,50 @@
+// _mixins.scss
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin hover-opacity($opacity: 0.8) {
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: $opacity;
+    }
+}
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+
+@mixin respond-md {
+    @media (min-width: $breakpoint-md) {
+        @content;
+    }
+}
+
+@mixin respond-lg {
+    @media (min-width: $breakpoint-lg) {
+        @content;
+    }
+}
+
+@mixin text-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin hide-scrollbar {
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
