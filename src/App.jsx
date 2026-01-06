@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchBigFive } from "./services/fetchBigFive";
+import Home from './pages/Home'
 
 const App = () => {
   const [testData, setTestData] = useState(null);
@@ -12,6 +13,7 @@ const App = () => {
 
   return (
     <>
+      <Home meta={testData.meta} />
       {/* testData.meta */}
       {/* testData.questions */}
       {/* testData.results */}

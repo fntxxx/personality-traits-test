@@ -1,0 +1,81 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
+
+.container {
+    background-color: $color-white;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bg {
+    height: 540px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inner {
+    padding: 96px 12px;
+}
+
+.content {
+    max-width: 1410px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    &Main {
+        @include heading-xxl;
+        max-width: 440px;
+        width: 100%;
+    }
+
+    &Sub {
+        @include text-md;
+        max-width: 280px;
+        width: 100%;
+        margin-top: auto;
+    }
+}
+
+.description {
+    @include flex-center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 810px;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 96px;
+
+    &Text {
+        @include text-base;
+        max-width: 450px;
+    }
+}
+
+.startButton {
+    @include flex-center;
+    max-width: 330px;
+    width: 100%;
+    height: 96px;
+    background-color: $color-primary;
+    gap: 8px;
+
+    &Text {
+        @include text-lg-bold($color: $color-white);
+    }
+
+    &Icon {
+        color: $color-white;
+        font-size: 40px;
+    }
+}
