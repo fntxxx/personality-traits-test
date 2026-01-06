@@ -1,12 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from "react";
+import { fetchBigFive } from "./services/fetchBigFive";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [testData, setTestData] = useState(null);
+
+  useEffect(() => {
+    fetchBigFive().then(setTestData);
+  }, []);
+
+  if (!testData) return <div>載入中...</div>;
 
   return (
     <>
+      {/* testData.meta */}
+      {/* testData.questions */}
+      {/* testData.results */}
     </>
-  )
-}
+  );
+};
 
 export default App
