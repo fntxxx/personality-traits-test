@@ -2,7 +2,7 @@
 
 @use "./variables" as *;
 
-@mixin text-base($color: $color-black-60) {
+@mixin text-base($color: $color-black-98) {
     font-family: $font-family-base;
     font-style: normal;
     font-weight: 300;
@@ -12,7 +12,7 @@
     color: $color;
 }
 
-@mixin text-md($weight: 300, $color: $color-black-87) {
+@mixin text-md($weight: 300, $color: $color-black-de) {
     font-family: $font-family-base;
     font-style: normal;
     font-weight: $weight;
@@ -22,7 +22,7 @@
     color: $color;
 }
 
-@mixin text-lg($weight: 300, $color: $color-black-87) {
+@mixin text-lg($weight: 300, $color: $color-black-de) {
     font-family: $font-family-base;
     font-style: normal;
     font-weight: $weight;
@@ -39,7 +39,7 @@
     font-size: $font-size-xl;
     line-height: $line-height-xl;
     letter-spacing: 0;
-    color: $color-black-87;
+    color: $color-black-de;
 }
 
 @mixin heading-xxl {
@@ -49,7 +49,7 @@
     font-size: $font-size-xxl;
     line-height: $line-height-xxl;
     letter-spacing: 0;
-    color: $color-black-87;
+    color: $color-black-de;
 }
 
 @mixin text-base-bold($color: $color-white) {
@@ -57,10 +57,10 @@
     font-weight: bold;
 }
 
-@mixin text-md-bold($color: $color-black-87) {
+@mixin text-md-bold($color: $color-black-de) {
     @include text-md(bold, $color);
 }
 
-@mixin text-lg-bold($color: $color-black-87) {
+@mixin text-lg-bold($color: $color-black-de) {
     @include text-lg(bold, $color);
 }
