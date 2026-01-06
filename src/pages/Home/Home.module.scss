@@ -26,22 +26,23 @@
 }
 
 .title {
-    max-width: 495px;
     width: 100%;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    column-gap: 24px;
+    gap: 24px;
 
     &Main {
         @include heading-xxl;
-        white-space: nowrap;
+        max-width: 440px;
+        width: 100%;
     }
 
     &Sub {
         @include text-md;
-        max-width: 215px;
+        max-width: 280px;
         width: 100%;
+        margin-top: auto;
     }
 }
 

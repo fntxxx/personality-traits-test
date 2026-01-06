@@ -13,7 +13,7 @@ const App = () => {
 
   return (
     <>
-      <Home />
+      <Home meta={testData.meta} />
       {/* testData.meta */}
       {/* testData.questions */}
       {/* testData.results */}
