@@ -50,3 +50,46 @@ $breakpoint-md: 1024px;
         display: none;
     }
 }
+
+@mixin custom-radio($size: 36px,
+    $inner-size: 18px,
+    $border-color: $color-black-de,
+    $active-color: $color-primary) {
+    input[type="radio"] {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    input[type="radio"]+label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    /* 外圈 */
+    input[type="radio"]+label::before {
+        content: '';
+        flex-shrink: 0;
+        width: $size;
+        height: $size;
+        border: 4px solid $border-color;
+        border-radius: 50%;
+        box-sizing: border-box;
+        background-color: transparent;
+    }
+
+    /* 選中狀態：中心點出現 */
+    input[type="radio"]:checked+label::before {
+        border-color: $active-color;
+        background-image: radial-gradient(circle,
+            $active-color 0,
+            $active-color calc(#{$inner-size} / 2),
+            transparent calc(#{$inner-size} / 2 + 1px));
+    }
+
+    input[type="radio"]:checked+label {
+        color: $active-color;
+    }
+}
