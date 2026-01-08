@@ -1,0 +1,168 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
+
+.container {
+    background-color: $color-white;
+    max-width: 1920px;
+    width: 100%;
+    min-height: 1080px;
+    margin: 0 auto;
+    display: flex;
+
+    @include respond-sm {
+        flex-direction: column;
+    }
+}
+
+.intro {
+    background-color: rgba($color-primary, 0.08);
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+}
+
+.backButton {
+    @include flex-center;
+    background-color: $color-primary;
+    width: 96px;
+    height: 96px;
+    margin-left: -12px;
+
+    &Icon {
+        color: $color-white;
+        font-size: 40px;
+    }
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 768px;
+    width: 100%;
+    margin: 144px auto 0;
+    gap: 16px;
+
+    @include respond-sm {
+        margin: 48px auto;
+    }
+
+    &Mark {
+        display: inline-block;
+        font: italic normal normal 120px/140px "PT Sans";
+        letter-spacing: 0px;
+        color: $color-black-de;
+        text-align: left;
+    }
+
+    &Text {
+        @include heading-xl;
+        max-width: 672px;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+}
+
+.title {
+    max-width: 760px;
+    width: 100%;
+    margin: auto auto 48px;
+
+    &Main {
+        @include text-base-bold($color: $color-black-60);
+    }
+
+    &Sub {
+        @include text-base($color: $color-black-60);
+
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.main {
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &Content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 12px;
+    }
+}
+
+.progress {
+    max-width: 768px;
+    width: 100%;
+    margin: 48px auto auto;
+    display: flex;
+
+    &Text {
+        font: italic normal normal 24px/24px "PT Sans";
+        color: $color-black-98;
+        margin-left: auto;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 816px;
+    width: 100%;
+    margin: auto auto 144px;
+
+    @include respond-sm {
+        margin: 60px auto;
+    }
+}
+
+.option {
+    &Row {
+        @include custom-radio;
+        display: flex;
+        align-items: center;
+    }
+
+    &Text {
+        @include text-md;
+        min-height: 0;
+    }
+
+    &Prefix {
+        font-weight: bold;
+    }
+}
+
+.nextButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 96px;
+    background-color: $color-primary;
+    gap: 8px;
+    padding-right: 24px;
+
+    @include respond-sm {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    &Text {
+        @include text-lg-bold($color: $color-white);
+    }
+
+    &Icon {
+        color: $color-white;
+        font-size: 40px;
+    }
+}
