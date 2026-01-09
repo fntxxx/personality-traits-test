@@ -1,0 +1,88 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.header {
+    min-height: min(540px, 50vh);
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 24px 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+
+    &Inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1410px;
+        width: 100%;
+        min-height: 42px;
+        margin: 0 auto;
+
+        @include respond-sm {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+}
+
+.title {
+    &Main {
+        @include text-base-bold($color: $color-white);
+    }
+
+    &Sub {
+        @include text-base($color: $color-white);
+
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.trait {
+    display: flex;
+    align-items: flex-end;
+    max-width: 1410px;
+    width: 100%;
+    min-height: 96px;
+    margin: auto auto 49px;
+    gap: 72px;
+
+    @include respond-sm {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px
+    }
+
+    &Name {
+        display: flex;
+        flex-direction: column;
+
+        @include respond-sm {
+            align-items: center;
+        }
+
+        &Zh {
+            @include heading-xl;
+            color: $color-white;
+        }
+
+        &En {
+            @include text-md($color: $color-white);
+        }
+    }
+
+
+    &Desc {
+        @include text-base($color: $color-white-de);
+        max-width: 450px;
+        width: 100%;
+        min-height: 96px;
+
+        @include respond-sm {
+            text-align: center;
+        }
+    }
+}

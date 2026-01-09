@@ -1,0 +1,21 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.navbar {
+    @include text-base($color: $color-white);
+    display: flex;
+    gap: 48px;
+    min-height: 24px;
+
+    @include respond-sm {
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    >[aria-current="true"] {
+        font-weight: bold;
+        display: inline-block;
+        box-shadow: 0 4px 0 0 $color-primary;
+    }
+}

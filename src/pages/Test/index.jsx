@@ -1,7 +1,7 @@
 // pages/Test/index.jsx
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Question from "../../components/Question";
+import TestView from "../../components/TestView";
 
 export default function Test({ testData }) {
     const navigate = useNavigate();
@@ -26,16 +26,8 @@ export default function Test({ testData }) {
         if (currentIndex < questions.length - 1) {
             setCurrentIndex(i => i + 1);
         } else {
-            const totalScore = Object.values(answers).reduce(
-                (a, b) => a + b,
-                0
-            );
-
             navigate("/result", {
-                state: {
-                    score: totalScore,
-                    answers
-                }
+                state: answers
             });
         }
     };
@@ -49,7 +41,7 @@ export default function Test({ testData }) {
     };
 
     return (
-        <Question
+        <TestView
             question={questions[currentIndex]}
             index={currentIndex}
             total={questions.length}

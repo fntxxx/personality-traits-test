@@ -1,0 +1,73 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.body {
+    max-width: 1410px;
+    width: 100%;
+    min-height: min(540px, 50vh);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+    gap: 48px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include respond-sm {
+        align-items: center;
+    }
+
+    &Text {
+        @include heading-xxl;
+    }
+
+    &Desc {
+        @include text-md;
+        max-width: 810px;
+        width: 100%;
+
+        @include respond-sm {
+            text-align: center;
+        }
+    }
+}
+
+.additional {
+    max-width: 810px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &Row {
+        @include text-base;
+        display: flex;
+        gap: 5px;
+    }
+
+    &Level {
+        font-weight: bold;
+        color: $color-black-de;
+    }
+
+    &Dash {
+        font-weight: 100;
+    }
+
+    &Desc {
+        max-width: 759px;
+        width: 100%;
+    }
+}

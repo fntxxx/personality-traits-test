@@ -10,19 +10,31 @@
 }
 
 .bg {
-    height: 540px;
+    min-height: min(540px, 50vh);
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .inner {
     padding: 96px 12px;
+    min-height: min(540px, 50vh);
+
+    @include respond-sm {
+        padding: 48px 12px;
+    }
 }
 
 .content {
     max-width: 1410px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+
+    @include respond-sm {
+        gap: 48px;
+    }
 }
 
 .title {
@@ -32,10 +44,19 @@
     flex-wrap: wrap;
     gap: 24px;
 
+    @include respond-sm {
+        flex-direction: column;
+        align-items: center;
+    }
+
     &Main {
         @include heading-xxl;
         max-width: 440px;
         width: 100%;
+
+        @include respond-sm {
+            max-width: none;
+        }
     }
 
     &Sub {
@@ -43,6 +64,10 @@
         max-width: 280px;
         width: 100%;
         margin-top: auto;
+
+        @include respond-sm {
+            max-width: none;
+        }
     }
 }
 
@@ -54,11 +79,15 @@
     max-width: 810px;
     width: 100%;
     margin-left: auto;
-    margin-top: 96px;
+    margin-top: auto;
 
     &Text {
         @include text-base;
         max-width: 450px;
+
+        @include respond-sm {
+            max-width: none;
+        }
     }
 }
 
