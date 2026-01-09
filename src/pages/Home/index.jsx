@@ -1,6 +1,6 @@
 // pages/Home/index.jsx
 import { useNavigate } from "react-router-dom";
-import styles from "./Home.module.scss";
+import styles from "./styles.module.scss";
 import bgImage from "../../assets/images/main-bg.avif";
 
 export default function Home({ meta }) {

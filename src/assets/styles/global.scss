@@ -3,7 +3,7 @@
 @use "./mixins" as *;
 @use "./typography" as *;
 
-@import "normalize.css";
+@import 'modern-css-reset';
 
 *,
 *::before,
@@ -28,6 +28,9 @@ a {
 }
 
 button {
+    padding: 0;
     border: 0;
     cursor: pointer;
+    background-color: transparent;
+    color: inherit;
 }

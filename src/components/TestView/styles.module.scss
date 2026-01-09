@@ -6,7 +6,7 @@
     background-color: $color-white;
     max-width: 1920px;
     width: 100%;
-    min-height: 1080px;
+    min-height: min(1080px, 100vh);
     margin: 0 auto;
     display: flex;
 
@@ -15,13 +15,13 @@
     }
 }
 
-.intro {
+.header {
     background-color: rgba($color-primary, 0.08);
     max-width: 960px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 0 12px;
+    gap: min(144px, 13.333vh);
 }
 
 .backButton {
@@ -29,12 +29,19 @@
     background-color: $color-primary;
     width: 96px;
     height: 96px;
-    margin-left: -12px;
 
     &Icon {
         color: $color-white;
         font-size: 40px;
     }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
 }
 
 .question {
@@ -43,7 +50,7 @@
     justify-content: space-between;
     max-width: 768px;
     width: 100%;
-    margin: 144px auto 0;
+    margin: 0 auto;
     gap: 16px;
 
     @include respond-sm {
@@ -89,6 +96,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: min(144px, 13.333vh);
+
+    @include respond-sm {
+        gap: 60px;
+    }
 
     &Content {
         width: 100%;
@@ -96,13 +108,14 @@
         display: flex;
         flex-direction: column;
         padding: 0 12px;
+        gap: min(96px, 8.889vh);
     }
 }
 
 .progress {
     max-width: 768px;
     width: 100%;
-    margin: 48px auto auto;
+    margin: 48px auto 0;
     display: flex;
 
     &Text {
@@ -115,14 +128,10 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 36px;
     max-width: 816px;
     width: 100%;
-    margin: auto auto 144px;
-
-    @include respond-sm {
-        margin: 60px auto;
-    }
+    margin: auto auto 0;
 }
 
 .option {

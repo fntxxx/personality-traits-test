@@ -1,8 +1,8 @@
 // src/components/Question/index.jsx
 import { useEffect } from "react";
-import styles from "./Question.module.scss";
+import styles from "./styles.module.scss";
 
-export default function Question({
+export default function TestView({
     question,
     index,
     total,
@@ -15,13 +15,9 @@ export default function Question({
         onAnswer(question.id, Number(value));
     };
 
-    useEffect(() => {
-        console.log(question);
-    }, [question])
-
     return (
         <div className={styles.container}>
-            <header className={styles.intro}>
+            <header className={styles.header}>
                 <button className={styles.backButton} onClick={onPrev}>
                     <span
                         className={`material-symbols-outlined ${styles.backButtonIcon}`}
@@ -29,13 +25,15 @@ export default function Question({
                         arrow_back
                     </span>
                 </button>
-                <div className={styles.question}>
-                    <span className={styles.questionMark} aria-hidden="true">Q</span>
-                    <h2 className={styles.questionText}>{question.problem}</h2>
-                </div>
-                <div className={styles.title}>
-                    <p className={styles.titleMain}>五大性格特質心理測驗</p>
-                    <p className={styles.titleSub}>Big Five personality traits test</p>
+                <div className={styles.intro}>
+                    <div className={styles.question}>
+                        <span className={styles.questionMark} aria-hidden="true">Q</span>
+                        <h2 className={styles.questionText}>{question.problem}</h2>
+                    </div>
+                    <div className={styles.title}>
+                        <p className={styles.titleMain}>五大性格特質心理測驗</p>
+                        <p className={styles.titleSub}>Big Five personality traits test</p>
+                    </div>
                 </div>
             </header>
             <main className={styles.main}>
