@@ -1,5 +1,6 @@
 // _mixins.scss
 
+@use "sass:color";
 @use "./variables" as *;
 
 @mixin flex-center {
@@ -91,5 +92,25 @@ $breakpoint-md: 1024px;
 
     input[type="radio"]:checked+label {
         color: $active-color;
+    }
+}
+
+@mixin interactive-button($base-color,
+    $hover-darken: 6%,
+    $active-darken: 10%) {
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+
+    &:hover {
+        background-color: color.adjust($base-color, $lightness: -$hover-darken);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+        background-color: color.adjust($base-color, $lightness: -$active-darken);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        transform: scale(0.98);
     }
 }

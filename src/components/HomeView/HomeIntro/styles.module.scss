@@ -29,13 +29,14 @@
     min-height: 96px;
     background-color: $color-primary;
     gap: 8px;
+    @include interactive-button($color-primary);
 
     &Text {
         @include text-lg-bold($color: $color-white);
     }
 
     &Icon {
-        color: $color-white;
-        font-size: 40px;
+        margin-top: -4px;
+        height: 48px;
     }
 }

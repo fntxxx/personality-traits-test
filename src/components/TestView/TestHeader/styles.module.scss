@@ -21,9 +21,12 @@
     width: 96px;
     min-height: 96px;
 
+
+    @include interactive-button($color-primary);
+
     &Icon {
-        color: $color-white;
-        font-size: 40px;
+        margin-top: -4px;
+        height: 48px;
     }
 }
 

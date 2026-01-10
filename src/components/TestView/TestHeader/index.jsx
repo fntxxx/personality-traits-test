@@ -1,13 +1,21 @@
 // src/components/TestView/TestHeader.jsx
 import styles from "./styles.module.scss";
+import ArrowBackIcon from "../../../assets/icons/arrow-back.svg";
 
 export default function TestHeader({ question, index, total, onPrev }) {
+    const backButtonLabel = index === 0
+        ? "返回首頁"
+        : "返回上一題";
+
     return (
         <header className={styles.header}>
-            <button className={styles.backButton} onClick={onPrev}>
-                <span className={`material-symbols-outlined ${styles.backButtonIcon}`}>
-                    arrow_back
-                </span>
+            <button className={styles.backButton} onClick={onPrev} aria-label={backButtonLabel}>
+                <img
+                    src={ArrowBackIcon}
+                    alt=""
+                    aria-hidden="true"
+                    className={styles.backButtonIcon}
+                />
             </button>
             <div className={styles.intro}>
                 <div className={styles.question}>
