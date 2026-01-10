@@ -1,0 +1,20 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.option {
+    &Row {
+        @include custom-radio;
+        display: flex;
+        align-items: center;
+    }
+
+    &Text {
+        @include text-md;
+        min-height: 0;
+    }
+
+    &Prefix {
+        font-weight: bold;
+    }
+}

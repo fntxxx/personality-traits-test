@@ -1,0 +1,16 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
+
+.container {
+    background-color: $color-white;
+    max-width: 1920px;
+    width: 100%;
+    min-height: min(1080px, 100vh);
+    margin: 0 auto;
+    display: flex;
+
+    @include respond-sm {
+        flex-direction: column;
+    }
+}

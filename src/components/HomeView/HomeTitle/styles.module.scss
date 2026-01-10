@@ -1,0 +1,37 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    @include respond-sm {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &Main {
+        @include heading-xxl;
+        max-width: 440px;
+        width: 100%;
+
+        @include respond-sm {
+            max-width: none;
+        }
+    }
+
+    &Sub {
+        @include text-md;
+        max-width: 280px;
+        width: 100%;
+        margin-top: auto;
+
+        @include respond-sm {
+            max-width: none;
+        }
+    }
+}

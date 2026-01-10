@@ -1,0 +1,61 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.actions {
+    @include text-lg;
+    margin: auto 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next {
+    margin-bottom: 52px;
+    display: flex;
+    align-items: center;
+
+    transition: color 0.2s, transform 0.1s;
+
+    &:hover {
+        color: $color-primary;
+        text-decoration: underline;
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+
+    &Icon {
+        margin-left: 8px;
+        margin-top: -4px;
+        height: 48px;
+    }
+}
+
+.restart {
+    @include flex-center;
+    margin-bottom: 48px;
+    max-width: 330px;
+    width: 100%;
+    min-height: 96px;
+    border: 2px solid $color-black-de;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // 浮起效果
+    }
+
+    &:active {
+        transform: scale(0.97);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); // 輕微內凹
+    }
+
+    &Icon {
+        margin-left: 8px;
+        margin-top: -4px;
+        height: 48px;
+    }
+}
+
+.text {
+    font-weight: bold;
+}

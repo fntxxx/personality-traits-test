@@ -1,0 +1,12 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    max-width: 816px;
+    width: 100%;
+    margin: auto auto 0;
+}

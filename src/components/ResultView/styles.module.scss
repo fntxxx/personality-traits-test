@@ -1,0 +1,9 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/typography" as *;
+
+.container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
