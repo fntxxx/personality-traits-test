@@ -1,6 +1,6 @@
 // App.jsx
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { fetchBigFive } from "./services/fetchBigFive";
 
 import Home from "./pages/Home";
@@ -16,7 +16,7 @@ const App = () => {
   if (!testData) return <div>載入中...</div>;
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -31,7 +31,7 @@ const App = () => {
           element={<Result results={testData.results} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
