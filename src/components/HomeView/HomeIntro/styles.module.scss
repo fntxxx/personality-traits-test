@@ -1,0 +1,41 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.intro {
+    @include flex-center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 810px;
+    width: 100%;
+    margin-left: auto;
+    margin-top: auto;
+
+    &Desc {
+        @include text-base;
+        max-width: 450px;
+
+        @include respond-sm {
+            max-width: none;
+        }
+    }
+}
+
+.startButton {
+    @include flex-center;
+    max-width: 330px;
+    width: 100%;
+    min-height: 96px;
+    background-color: $color-primary;
+    gap: 8px;
+
+    &Text {
+        @include text-lg-bold($color: $color-white);
+    }
+
+    &Icon {
+        color: $color-white;
+        font-size: 40px;
+    }
+}

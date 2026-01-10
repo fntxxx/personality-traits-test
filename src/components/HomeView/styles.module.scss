@@ -6,11 +6,14 @@
     background-color: $color-white;
     max-width: 1920px;
     width: 100%;
-    min-height: min(1080px, 100vh);
     margin: 0 auto;
-    display: flex;
+}
+
+.inner {
+    padding: 96px 12px;
+    min-height: min(540px, 50vh);
 
     @include respond-sm {
-        flex-direction: column;
+        padding: 48px 12px;
     }
 }
