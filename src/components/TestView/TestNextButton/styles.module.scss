@@ -1,0 +1,28 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.nextButton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    min-height: 96px;
+    background-color: $color-primary;
+    gap: 8px;
+    padding-right: 24px;
+
+    @include respond-sm {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    &Text {
+        @include text-lg-bold($color: $color-white);
+    }
+
+    &Icon {
+        color: $color-white;
+        font-size: 40px;
+    }
+}

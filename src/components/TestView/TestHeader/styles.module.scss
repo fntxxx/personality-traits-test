@@ -1,0 +1,90 @@
+@use "../../../assets/styles/variables" as *;
+@use "../../../assets/styles/mixins" as *;
+@use "../../../assets/styles/typography" as *;
+
+.header {
+    background-color: rgba($color-primary, 0.08);
+    max-width: 960px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: min(144px, 13.333vh);
+
+    @include respond-sm {
+        gap: 48px;
+    }
+}
+
+.backButton {
+    @include flex-center;
+    background-color: $color-primary;
+    width: 96px;
+    min-height: 96px;
+
+    &Icon {
+        color: $color-white;
+        font-size: 40px;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 0 12px;
+
+    @include respond-sm {
+        height: auto;
+        gap: 48px;
+    }
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 16px;
+
+    &Mark {
+        display: inline-block;
+        font: italic normal normal 120px/140px "PT Sans";
+        letter-spacing: 0px;
+        color: $color-black-de;
+        text-align: left;
+    }
+
+    &Text {
+        @include heading-xl;
+        max-width: 672px;
+        width: 100%;
+        margin: 0 auto;
+
+    }
+}
+
+.title {
+    max-width: 760px;
+    width: 100%;
+    margin: auto auto 48px;
+    display: flex;
+    flex-direction: column;
+
+    @include respond-sm {
+        align-items: flex-end;
+    }
+
+    &Main {
+        @include text-base-bold($color: $color-black-60);
+    }
+
+    &Sub {
+        @include text-base($color: $color-black-60);
+
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
