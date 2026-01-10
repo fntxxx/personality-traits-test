@@ -6,6 +6,7 @@ import crypto from 'crypto';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/personality-traits-test/',
   css: {
     modules: {
       generateScopedName: (name, filename, css) => {
