@@ -30,6 +30,16 @@
 }
 
 .title {
+    transition: opacity 0.2s;
+
+    &:hover {
+        opacity: 0.85;
+    }
+
+    &:active {
+        opacity: 0.7;
+    }
+
     &Main {
         @include text-base-bold($color: $color-white);
     }
