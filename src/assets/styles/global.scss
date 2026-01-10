@@ -1,9 +1,8 @@
 // global.scss
+@use 'modern-css-reset' as *;
 @use "./variables" as *;
 @use "./mixins" as *;
 @use "./typography" as *;
-
-@import 'modern-css-reset';
 
 *,
 *::before,
