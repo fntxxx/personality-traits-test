@@ -70,7 +70,7 @@
 
 ### 結果頁畫面
 ![結果頁畫面 1](./screenshots/result-1.jpg)
-![結果頁畫面 2](./screenshots/result-1.jpg)
+![結果頁畫面 2](./screenshots/result-2.jpg)
 
 ---
 
